@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "LaunchViewController.collectionView(_:cellForItemAt:):LaunchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " selectedService.type">
+            </PersistentString>
+            <PersistentString
+               value = "selectedService.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailsViewController.collectionView(_:cellForItemAt:):DetailsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailsViewController.viewDidLoad():DetailsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "browseForService">
+            </PersistentString>
+            <PersistentString
+               value = "serviceType.index(of: &quot;.&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "LaunchViewController.collectionView(_:didSelectItemAt:):LaunchViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " next.name ">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
