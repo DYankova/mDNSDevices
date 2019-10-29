@@ -18,13 +18,13 @@ class LaunchViewController: UIViewController , UICollectionViewDataSource, UICol
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = .vertical
         let collection = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
         collection.translatesAutoresizingMaskIntoConstraints = false
         return collection
     }()
     
-        private lazy var titleLable : UILabel = {
+    private lazy var titleLable : UILabel = {
         let lbl = UILabel()
         lbl.text = "Click on an item for more information :)"
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -35,34 +35,34 @@ class LaunchViewController: UIViewController , UICollectionViewDataSource, UICol
         super.viewDidLoad()
         setupViews()
         addConstraints()
-        
+      
         myBonjourServiceBrowser.delegate = self
         myBonjourServiceBrowser.searchForServices(ofType: serviceQuery, inDomain: domain)
     }
    
    private func addConstraints() {
-          titleLable.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50).isActive = true
-          titleLable.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
-          titleLable.heightAnchor.constraint(equalToConstant: 50).isActive = true
-          titleLable.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-          
-          collectionView.topAnchor.constraint(equalTo: titleLable.bottomAnchor, constant: 20).isActive = true
-          collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-          collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
-          collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-      }
+      titleLable.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50).isActive = true
+      titleLable.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
+      titleLable.heightAnchor.constraint(equalToConstant: 50).isActive = true
+      titleLable.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+      
+      collectionView.topAnchor.constraint(equalTo: titleLable.bottomAnchor, constant: 20).isActive = true
+      collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+      collectionView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20).isActive = true
+      collectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+  }
 
-      private func setupViews() {
-          view.addSubview(collectionView)
-          view.addSubview(titleLable)
-          view.backgroundColor = .white
-          
-          collectionView.backgroundColor = .clear
-          collectionView.dataSource = self
-          collectionView.delegate = self
-          collectionView.register(DeviceCell.self, forCellWithReuseIdentifier: "DeviceCell")
-          collectionView.reloadData()
-      }
+  private func setupViews() {
+      view.addSubview(collectionView)
+      view.addSubview(titleLable)
+      view.backgroundColor = .white
+      
+      collectionView.backgroundColor = .clear
+      collectionView.dataSource = self
+      collectionView.delegate = self
+      collectionView.register(DeviceCell.self, forCellWithReuseIdentifier: "DeviceCell")
+      collectionView.reloadData()
+  }
     
     override func viewDidDisappear(_ animated: Bool) {
         myBonjourDomainBrowser.stop()
@@ -71,7 +71,7 @@ class LaunchViewController: UIViewController , UICollectionViewDataSource, UICol
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+  
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         return services.count
     }
@@ -116,7 +116,6 @@ class LaunchViewController: UIViewController , UICollectionViewDataSource, UICol
      }
          
      func netServiceBrowserDidStopSearch(_ browser: NetServiceBrowser) {
-         // The search has stopped for the current search.  If we have more searches to perform then start them.
          print("Got Service Search stop in BonjourServiceTableViewController")
      }
 

@@ -15,8 +15,8 @@
 		27454260235D8CAC00361DBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2745425E235D8CAC00361DBB /* LaunchScreen.storyboard */; };
 		2745426B235D8CAC00361DBB /* LocalServiceMdnsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745426A235D8CAC00361DBB /* LocalServiceMdnsTests.swift */; };
 		27454276235D8CAC00361DBB /* LocalServiceMdnsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27454275235D8CAC00361DBB /* LocalServiceMdnsUITests.swift */; };
-		27454284235D8CF700361DBB /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27454283235D8CF700361DBB /* DeviceCell.swift */; };
 		27454286235D8D7B00361DBB /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27454285235D8D7B00361DBB /* DetailsViewController.swift */; };
+		27E133B223682D9200459CA5 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E133B123682D9200459CA5 /* DeviceCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,8 @@
 		27454271235D8CAC00361DBB /* LocalServiceMdnsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalServiceMdnsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27454275235D8CAC00361DBB /* LocalServiceMdnsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalServiceMdnsUITests.swift; sourceTree = "<group>"; };
 		27454277235D8CAC00361DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27454283235D8CF700361DBB /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceCell.swift; path = ../../../.Trash/MdnsDevices/MdnsDevices/MdnsDevices/Cells/DeviceCell.swift; sourceTree = "<group>"; };
 		27454285235D8D7B00361DBB /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		27E133B123682D9200459CA5 /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +107,8 @@
 				27454255235D8CAB00361DBB /* SceneDelegate.swift */,
 				27454257235D8CAB00361DBB /* LaunchViewController.swift */,
 				27454285235D8D7B00361DBB /* DetailsViewController.swift */,
+				27E133B123682D9200459CA5 /* DeviceCell.swift */,
 				27454259235D8CAB00361DBB /* Main.storyboard */,
-				27454283235D8CF700361DBB /* DeviceCell.swift */,
 				2745425C235D8CAC00361DBB /* Assets.xcassets */,
 				2745425E235D8CAC00361DBB /* LaunchScreen.storyboard */,
 				27454261235D8CAC00361DBB /* Info.plist */,
@@ -268,8 +268,8 @@
 				27454258235D8CAB00361DBB /* LaunchViewController.swift in Sources */,
 				27454254235D8CAB00361DBB /* AppDelegate.swift in Sources */,
 				27454256235D8CAB00361DBB /* SceneDelegate.swift in Sources */,
-				27454284235D8CF700361DBB /* DeviceCell.swift in Sources */,
 				27454286235D8D7B00361DBB /* DetailsViewController.swift in Sources */,
+				27E133B223682D9200459CA5 /* DeviceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

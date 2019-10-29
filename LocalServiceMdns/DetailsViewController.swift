@@ -19,7 +19,7 @@ class DetailsViewController: UIViewController , UICollectionViewDelegateFlowLayo
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = .vertical
         let collection = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: layout)
         collection.translatesAutoresizingMaskIntoConstraints = false
         return collection
@@ -27,7 +27,7 @@ class DetailsViewController: UIViewController , UICollectionViewDelegateFlowLayo
 
     let navBar = UINavigationBar(frame: CGRect(x: 20, y: 50, width: 120, height: 50))
     let navItem = UINavigationItem(title: "Back")
-    let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.close, target: nil, action: #selector(close))
+    let doneItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.rewind, target: nil, action: #selector(close))
     
     var name: String = ""
     var type: String = ""
@@ -45,26 +45,27 @@ class DetailsViewController: UIViewController , UICollectionViewDelegateFlowLayo
     }
     
     private func addConstraints() {
-           collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120).isActive = true
-           collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-           collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-           collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-       }
+       collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 120).isActive = true
+       collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+       collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
+       collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+   }
        
-       private func setupViews() {
-           view.addSubview(navBar)
-           view.addSubview(collectionView)
-           navItem.rightBarButtonItem = doneItem
-           navBar.setItems([navItem], animated: false)
-           
-           view.backgroundColor = .white
-           
-           collectionView.backgroundColor = .clear
-           collectionView.dataSource = self
-           collectionView.delegate = self
-           collectionView.register(DeviceCell.self, forCellWithReuseIdentifier: "DeviceCell")
-           collectionView.reloadData()
-       }
+   private func setupViews() {
+       view.addSubview(navBar)
+       view.addSubview(collectionView)
+       navItem.rightBarButtonItem = doneItem
+       navBar.setItems([navItem], animated: false)
+       
+       view.backgroundColor = .white
+       
+       collectionView.backgroundColor = .clear
+       collectionView.dataSource = self
+       collectionView.delegate = self
+       collectionView.register(DeviceCell.self, forCellWithReuseIdentifier: "DeviceCell")
+       collectionView.reloadData()
+   }
+    
     @objc func close(button : UIButton){
         self.dismiss(animated: true, completion: nil)
     }
@@ -114,7 +115,6 @@ class DetailsViewController: UIViewController , UICollectionViewDelegateFlowLayo
     }
     
     func netServiceBrowserDidStopSearch(_ browser: NetServiceBrowser) {
-        // The search has stopped for the current search.  If we have more searches to perform then start them.
         print("Got service browse stop in DiscoveredServicesTableViewController")
     }
  
